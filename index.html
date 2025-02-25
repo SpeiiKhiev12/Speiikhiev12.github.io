@@ -3,81 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Shop</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Digital Services Marketplace</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <h1>Welcome to My Shop</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-4 shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Digital Market</h1>
+            <nav class="space-x-4">
+                <a href="#" class="hover:text-blue-200">Home</a>
+                <a href="#services" class="hover:text-blue-200">Services</a>
+                <a href="#" class="hover:text-blue-200">About</a>
+                <a href="#" class="hover:text-blue-200">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h2>Your One-Stop Shop for Quality Products</h2>
-        <p>Discover amazing deals and high-quality items at unbeatable prices.</p>
-        <a href="#products" class="btn">Shop Now</a>
+    <section class="bg-blue-500 text-white py-20 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-4">Unlock Digital Possibilities</h2>
+            <p class="text-xl mb-8">Premium Digital Services at Your Fingertips</p>
+            <a href="#services" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">
+                Explore Services
+            </a>
+        </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="products">
-        <h2>Our Products</h2>
-        <div class="product-grid">
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Product 1">
-                <h3>Product 1</h3>
-                <p>$19.99</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Product 2">
-                <h3>Product 2</h3>
-                <p>$29.99</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Product 3">
-                <h3>Product 3</h3>
-                <p>$39.99</p>
-                <button>Add to Cart</button>
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Digital Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg service-card">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i data-feather="film" class="mr-4 text-blue-600"></i>
+                            <h3 class="text-xl font-semibold">Canva Pro</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Premium Design Tool with Advanced Features</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">$4.99</span>
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg service-card">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i data-feather="youtube" class="mr-4 text-red-600"></i>
+                            <h3 class="text-xl font-semibold">YouTube Premium</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Ad-Free Streaming & Background Play</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">$11.99</span>
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg service-card">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i data-feather="scissors" class="mr-4 text-purple-600"></i>
+                            <h3 class="text-xl font-semibold">CapCut Pro</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Professional Video Editing Tool</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">$9.99</span>
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>We are a small business dedicated to providing high-quality products at affordable prices. Our mission is to make shopping easy and enjoyable for everyone.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2023 My Shop. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Digital Market. All Rights Reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-blue-300">Privacy Policy</a>
+                <a href="#" class="hover:text-blue-300">Terms of Service</a>
+                <a href="#" class="hover:text-blue-300">Contact Us</a>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+    </script>
 </body>
 </html>
